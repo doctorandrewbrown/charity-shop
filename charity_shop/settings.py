@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home'
 ]
 
 MIDDLEWARE = [
@@ -58,7 +59,13 @@ ROOT_URLCONF = 'charity_shop.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        # Register frontend templates
+        'DIRS': [
+            # my frontend templates directory
+            os.path.join(BASE_DIR, "templates"),
+            # custom allauth directory for html overides
+            os.path.join(BASE_DIR, "templates", "allauth")
+            ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
