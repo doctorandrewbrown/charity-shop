@@ -24,7 +24,7 @@ SECRET_KEY = 'django-insecure-5f5u-q5(ct@2&b%!ky2dd*9s53rnxh)0j+n0*k0d8z76$z@w^z
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
-ALLOWED_HOSTS = ['8000-doctorandre-charityshop-ajbktt8quiw.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['8000-doctorandre-charityshop-ajbktt8quiw.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -149,11 +149,10 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.2/howto/static-files/
+# https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
-
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
